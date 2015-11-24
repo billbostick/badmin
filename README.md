@@ -15,13 +15,17 @@ Installation:
 
 These instructions describe the installation of Badmin, Laravel-ACL, and the Illuminate/HTML package. If you already have either of the dependant packages installed, you may have already performed some of these steps.
 
-1. Use composer to require the package:
+### Step 1
+
+Use composer to require the package:
 
 ```
 $ composer require bostick/badmin:dev-master@dev
 ```
 
-2. Add the service provides for HTML, Laravel-Acl, and Badmin to config/app.php:
+### Step 2
+
+Add the service provides for HTML, Laravel-Acl, and Badmin to config/app.php:
 
  ```php
     'providers' => [
@@ -32,7 +36,9 @@ $ composer require bostick/badmin:dev-master@dev
     ...
 ```
 
-3. Add the aliases for HTML to config/app.php:
+### Step 3
+
+Add the aliases for HTML to config/app.php:
 
 ```php
   'aliases' => [
@@ -42,7 +48,9 @@ $ composer require bostick/badmin:dev-master@dev
     ...
 ```
 
-4. Add the HasRole trait to your User model (app/User.php). Note this issue at https://github.com/kodeine/laravel-acl/issues/90. The following code works with the current release of Laravel-ACL.
+### Step 4
+
+Add the HasRole trait to your User model (app/User.php). Note this issue at https://github.com/kodeine/laravel-acl/issues/90. The following code works with the current release of Laravel-ACL.
 
 ```php
   use Kodeine\Acl\Traits\HasRole;
@@ -58,19 +66,25 @@ $ composer require bostick/badmin:dev-master@dev
       HasRole::can insteadof Authorizable;
   }
 ```                                                                                                  
-5. Use artisan to publish package features:
+### Step 5
+
+Use artisan to publish package features:
 
 ```
   $ php artisan vendor:publish
 ```
 
-6. Use artisan to run the migration scripts:
+### Step 6
+
+Use artisan to run the migration scripts:
 
 ```
   $ php artisan migrate
 ```
 
-7. Add the following to your app/Http/Kernel.php
+### Step 7
+
+Add the following to your app/Http/Kernel.php
 
 ```php
     protected $routeMiddleware = [
@@ -78,7 +92,7 @@ $ composer require bostick/badmin:dev-master@dev
         ];
 ```
 
-# <a name="use"></a>Use:
+### <a name="use"></a>Use:
 
 Once it is installed, Badmin will provide primary views at the following routes:
 
