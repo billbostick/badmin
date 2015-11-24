@@ -1,0 +1,28 @@
+{
+  "name": "bostick/badmin",
+  "description": "an admin package for laravel 5.1",
+  "keywords": ["laravel", "admin"],
+  "homepage": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bill Bostick",
+      "email": "bill@bosticks.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/config": "~5.0",
+    "illuminate/support": "~5.0",
+    "kodeine/laravel-acl": "*",
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bostick\\Badmin\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
