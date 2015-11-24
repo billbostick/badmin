@@ -18,6 +18,7 @@ class ServiceProvider extends LaravelServiceProvider {
      */
     public function boot() {
 
+        $this->package('bostick/badmin');
         $this->handleConfigs();
         // $this->handleMigrations();
         $this->handleViews();
