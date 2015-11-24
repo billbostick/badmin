@@ -1,6 +1,6 @@
 <?php
 
-namespace Bostick\Badnin;
+namespace Bostick\Badnin\Controllers;
 
 use Illuminate\Http\Request;
 
