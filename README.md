@@ -95,7 +95,7 @@ Add the following to your app/Http/Kernel.php
 
 # <a name="use"></a>Use
 
-Once it is installed, Badmin will provide primary views at the following routes:
+Once it is installed, Badmin will provide views at the following routes:
 
 ```
   login
