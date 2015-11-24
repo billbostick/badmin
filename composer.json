@@ -21,7 +21,7 @@
   },
   "autoload": {
     "classmap": [
-        "src/Controllers"
+        "src/Bostick/Badmin/Controllers"
       ],
     "psr-0": {
       "Bostick\\Badmin": "src/"
