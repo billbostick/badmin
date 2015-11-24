@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('badmin::layouts.master')
 @section('title')Create User @stop
 @section('content')
-@include('partials.nav-partial', array('active' => 'Users'))
+@include('badmin::partials.nav-partial', array('active' => 'Users'))
 {!! Form::open(['role' => 'form', 'url' => '/admin/user']) !!}
 <div class='form-group'>
   {!! Form::label('name', 'Username') !!}

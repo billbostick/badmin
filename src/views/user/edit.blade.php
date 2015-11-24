@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('badmin::layouts.master')
 @section('title')Edit User @stop
 @section('content')
-@include('partials.nav-partial', array('active' => 'Users'))
+@include('badmin::partials.nav-partial', array('active' => 'Users'))
 {!! Form::model($user, ['role' => 'form', 'url' => '/admin/user/' . $user->id, 'method' => 'PUT']) !!}
 <div class='form-group'>
   {!! Form::label('name', 'Username') !!}
