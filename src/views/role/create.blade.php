@@ -1,4 +1,4 @@
-@extends('bacmin::layouts.master')
+@extends('badmin::layouts.master')
 @section('title')Create Role @stop
 @section('content')
 @include('badmin::partials.nav-partial', array('active' => 'Roles'))
