@@ -20,8 +20,8 @@
     "phpunit/phpunit": "~4.0"
   },
   "autoload": {
-    "psr-4": {
-      "Bostick\\Badmin\\": "src/"
+    "psr-0": {
+      "Bostick\\Badmin": "src/"
     }
   },
   "minimum-stability": "dev"
