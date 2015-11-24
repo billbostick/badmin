@@ -45,31 +45,10 @@ class PermissionController extends Controller
     {
       $permission = new Permission;
       $perms = array();
-
-      if (Input::get('create')) {
-        $perms['create'] = true;
-      } else {
-        $perms['create'] = false;
-      }
-
-      if (Input::get('view')) {
-        $perms['view'] = true;
-      } else {
-        $perms['view'] = false;
-      }
-
-      if (Input::get('update')) {
-        $perms['update'] = true;
-      } else {
-        $perms['update'] = false;
-      }
-
-      if (Input::get('delete')) {
-        $perms['delete'] = true;
-      } else {
-        $perms['delete'] = false;
-      }
-
+      $perms['create'] = (Input::get('create') == null) ? false : true;
+      $perms['view'] = (Input::get('view') == null) ? false : true;
+      $perms['update'] = (Input::get('update') == null) ? false : true;
+      $perms['delete'] = (Input::get('delete') == null) ? false : true;
       $permission->slug = $perms;
       $permission->name = Input::get('name');
       $permission->description = Input::get('description');
@@ -105,30 +84,10 @@ class PermissionController extends Controller
         $permission->description = Input::get('description');
       $perms = array();
 
-      if (Input::get('create')) {
-        $perms['create'] = true;
-      } else {
-        $perms['create'] = false;
-      }
-
-      if (Input::get('view')) {
-        $perms['view'] = true;
-      } else {
-        $perms['view'] = false;
-      }
-
-      if (Input::get('update')) {
-        $perms['update'] = true;
-      } else {
-        $perms['update'] = false;
-      }
-
-      if (Input::get('delete')) {
-        $perms['delete'] = true;
-      } else {
-        $perms['delete'] = false;
-      }
-
+      $perms['create'] = (Input::get('create') == null) ? false : true;
+      $perms['view'] = (Input::get('view') == null) ? false : true;
+      $perms['update'] = (Input::get('update') == null) ? false : true;
+      $perms['delete'] = (Input::get('delete') == null) ? false : true;
       $permission->slug = $perms;
         $permission->save();
 
