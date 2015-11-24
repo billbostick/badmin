@@ -24,7 +24,8 @@
         "src/Bostick/Badmin/Controllers"
       ],
     "psr-4": {
-      "Bostick\\Badmin": "src/"
+      "App\\": "app/",
+      "Bostick\\Badmin\\": "src/"
     }
   },
   "minimum-stability": "dev"

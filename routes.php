@@ -22,13 +22,13 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 // Admin routs
-Route::get('admin/user/{id}/permissions', 'UserController@getUserPermissions');
-Route::post('admin/user/{id}/permissions', 'UserController@postUserPermissions');
-Route::resource('admin/user', 'UserController');
-Route::resource('admin/role', 'RoleController');
-Route::resource('admin/permission', 'PermissionController');
+Route::get('admin/user/{id}/permissions', 'bostick\badmin\UserController@getUserPermissions');
+Route::post('admin/user/{id}/permissions', 'bostick\badmin\UserController@postUserPermissions');
+Route::resource('admin/user', 'bostick\badmin\UserController');
+Route::resource('admin/role', 'bostick\badmin\RoleController');
+Route::resource('admin/permission', 'bostick\badmin\PermissionController');
 
-Route::get('admin/access', 'PermissionRoleController@index');
-Route::post('admin/access', 'PermissionRoleController@store');
+Route::get('admin/access', 'bostick\badmin\PermissionRoleController@index');
+Route::post('admin/access', 'bostick\badmin\PermissionRoleController@store');
 
 
