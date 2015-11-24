@@ -23,7 +23,7 @@
     "classmap": [
         "src/Bostick/Badmin/Controllers"
       ],
-    "psr-0": {
+    "psr-4": {
       "Bostick\\Badmin": "src/"
     }
   },
