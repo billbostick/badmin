@@ -4,14 +4,15 @@ Badmin provides a simple admin interface for the authentication features that ar
 
 # Table of Contents
 * [Requirements and Dependencies](#requirements)
+* [Installation](#installation)
 * [Use](#use)
 
 
-# <a name="requirements"></a>Requirements and Dependencies:
+# <a name="requirements"></a>Requirements and Dependencies
 
 This package requires PHP 5.5.9 or greater. It has dependencies on the  Illuminate/HTML and Kodeine/Laravel-ACL packages.
 
-Installation:
+# <a name="installation"></a>Installation
 
 These instructions describe the installation of Badmin, Laravel-ACL, and the Illuminate/HTML package. If you already have either of the dependant packages installed, you may have already performed some of these steps.
 
@@ -92,7 +93,7 @@ Add the following to your app/Http/Kernel.php
         ];
 ```
 
-### <a name="use"></a>Use:
+### <a name="use"></a>Use
 
 Once it is installed, Badmin will provide primary views at the following routes:
 
