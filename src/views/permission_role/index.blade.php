@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('badmin::layouts.master')
 @section('title')Permissions @stop
 @section('content')
-@include('partials.nav-partial', array('active' => 'Access'))
+@include('badmin::partials.nav-partial', array('active' => 'Access'))
 <table class="table table-condensed">
   {!! Form::open(['role' => 'form', 'url' => '/admin/access']) !!}
   <thead>

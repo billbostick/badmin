@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('badmin::layouts.master')
 @section('title')Edit Permission @stop
 @section('content')
-@include('partials.nav-partial', array('active' => 'Permissions'))
+@include('badmin::partials.nav-partial', array('active' => 'Permissions'))
 {!! Form::model($permission, ['role' => 'form', 'url' => '/admin/permission/' . $permission->id, 'method' => 'PUT']) !!}
 <div class='form-group'>
   {!! Form::label('name', 'Name') !!}

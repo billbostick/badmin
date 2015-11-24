@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('bacmin::layouts.master')
 @section('title')Create Role @stop
 @section('content')
-@include('partials.nav-partial', array('active' => 'Roles'))
+@include('badmin::partials.nav-partial', array('active' => 'Roles'))
 {!! Form::open(['role' => 'form', 'url' => '/admin/role']) !!}
 <div class='form-group'>
   {!! Form::label('name', 'Name') !!}

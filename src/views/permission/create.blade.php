@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('badmin::layouts.master')
 @section('title')Create Permission @stop
 @section('content')
-@include('partials.nav-partial', array('active' => 'Permissions'))
+@include('badmin::partials.nav-partial', array('active' => 'Permissions'))
 {!! Form::open(['role' => 'form', 'url' => '/admin/permission']) !!}
 <div class='form-group'>
   {!! Form::label('name', 'Name') !!}

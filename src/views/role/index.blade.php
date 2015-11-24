@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('badmin::layouts.master')
 @section('title')Roles @stop
 @section('content')
-@include('partials.nav-partial', array('active' => 'Roles'))
-@include('partials.delete-confirm')
+@include('badmin::partials.nav-partial', array('active' => 'Roles'))
+@include('badmin::partials.delete-confirm')
 <table class="table table-condensed">
   <thead>
     <tr>

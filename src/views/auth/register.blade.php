@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('badmin::layouts.master')
 @section('content')
 <h1>Register</h1>
 <form method="POST" action="/register">

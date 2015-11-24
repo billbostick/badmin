@@ -21,7 +21,7 @@ ul.nav-pills {
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
-        @include('partials.header-partial')
+        @include('badmin::partials.header-partial')
         @if ($errors->has())
           @foreach ($errors->all() as $error)
             <div class='bg-danger alert'>
