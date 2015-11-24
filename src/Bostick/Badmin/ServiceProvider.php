@@ -1,8 +1,8 @@
 <?php namespace Bostick\Badmin;
 
-use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends LaravelServiceProvider {
+class ServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -18,7 +18,7 @@ class ServiceProvider extends LaravelServiceProvider {
      */
     public function boot() {
 
-        $this->handleConfigs();
+        // $this->handleConfigs();
         // $this->handleMigrations();
         $this->handleViews();
         // $this->handleTranslations();
