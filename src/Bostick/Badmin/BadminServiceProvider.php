@@ -62,9 +62,9 @@ class BadminServiceProvider extends ServiceProvider {
 
     private function handleViews() {
 
-        $this->loadViewsFrom(__DIR__.'/../../views', 'badmin');
+        $this->loadViewsFrom(__DIR__.'/../../../views', 'badmin');
 
-        $this->publishes([__DIR__.'/../../views' => base_path('resources/views/bostick/badmin')]);
+        $this->publishes([__DIR__.'/../../../views' => base_path('resources/views/bostick/badmin')]);
     }
 
     private function handleMigrations() {
@@ -74,6 +74,6 @@ class BadminServiceProvider extends ServiceProvider {
 
     private function handleRoutes() {
 
-        include __DIR__.'/../../routes.php';
+        include __DIR__.'/../../../routes.php';
     }
 }
