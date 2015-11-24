@@ -19,7 +19,7 @@
       @foreach ($roles as $role)
         <td class='text-center'>
 <?php 
-  $utilLib= new \App\lib\utilLib;
+  $utilLib= new Bostick\Badmin\lib\utilLib;
 ?>
           {!! Form::checkbox($role->id . '-' . $permission->id, 
                              $role->id . '-' . $permission->id, 

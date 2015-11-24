@@ -1,8 +1,4 @@
-This is the badmin readme file. This is an edit.
-
-php artisan vendor:publish
-php artisan migrate
-
+This is the badmin readme file. 
 
 edit config\app.php:
 
@@ -13,15 +9,18 @@ edit config\app.php:
     'Form'      => Illuminate\Html\FormFacade::class,
     'Html'      => Illuminate\Html\HtmlFacade::class,
 
+php artisan vendor:publish
+php artisan migrate
 
 edit app\User.php and add the HasRole trait to your User model:
+(see https://github.com/kodeine/laravel-acl/issues/90)
 
     use Kodeine\Acl\Traits\HasRole;
 
-    class User extends Model implements AuthenticatableContract, CanResetPasswordContract
-    {
-        use Authenticatable, CanResetPassword, HasRole;
-    }
+    use Authenticatable, Authorizable, CanResetPassword, HasRole {
+        HasRole::can insteadof Authorizable;
+            }
+
 
 Add the following to your app/Http/Kernel.php
 
