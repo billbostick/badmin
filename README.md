@@ -1,5 +1,7 @@
 # Badmin
 
+[![Latest Stable Version](https://poser.pugx.org/bostick/badmin/v/stable)](https://packagist.org/packages/bostick/badmin) [![Total Downloads](https://poser.pugx.org/bostick/badmin/downloads)](https://packagist.org/packages/bostick/badmin) [![Latest Unstable Version](https://poser.pugx.org/bostick/badmin/v/unstable)](https://packagist.org/packages/bostick/badmin) [![License](https://poser.pugx.org/bostick/badmin/license)](https://packagist.org/packages/bostick/badmin)
+
 Badmin provides a simple admin interface for the authentication features that are built into Laravel 5.1, as well as the Laravel ACL package (https://github.com/kodeine/laravel-acl). The screens are based on Bootstrap and jQuery.
 
 # Table of Contents
