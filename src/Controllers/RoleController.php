@@ -22,7 +22,7 @@ class RoleController extends Controller
     public function index()
     {
       $roles = Role::all();
-      return View::make('role.index', ['roles' => $roles]);
+      return View::make('badmin::role.index', ['roles' => $roles]);
     }
 
     /**
@@ -32,7 +32,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return View::make('role.create');
+        return View::make('badmin::role.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class RoleController extends Controller
     public function edit($id)
     {
         $role = Role::find($id);
-        return View::make('role.edit', [ 'role' => $role ]);
+        return View::make('badmin::role.edit', [ 'role' => $role ]);
     }
 
     /**

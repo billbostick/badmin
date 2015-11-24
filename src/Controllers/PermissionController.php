@@ -22,7 +22,7 @@ class PermissionController extends Controller
     public function index()
     {
       $permissions = Permission::all();
-      return View::make('permission.index', ['permissions' => $permissions]);
+      return View::make('badmin::permission.index', ['permissions' => $permissions]);
     }
 
     /**
@@ -32,7 +32,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-       return View::make('permission.create');
+       return View::make('badmin::permission.create');
     }
 
     /**
@@ -88,7 +88,7 @@ class PermissionController extends Controller
     public function edit($id)
     {
         $permission = Permission::find($id);
-        return View::make('permission.edit', [ 'permission' => $permission ]);
+        return View::make('badmin::permission.edit', [ 'permission' => $permission ]);
     }
 
     /**

@@ -50,7 +50,7 @@ class ProfileController extends Controller
     public function show($id)
     {
       $profile = Profile::find($id);
-      return view('profile.show', compact('profile'));
+      return view('badmin::profile.show', compact('profile'));
     }
 
     /**

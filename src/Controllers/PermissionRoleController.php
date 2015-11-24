@@ -23,7 +23,7 @@ class PermissionRoleController extends Controller
     {
       $roles = Role::all();
       $permissions = Permission::all();
-      return View::make('permission_role.index', ['roles' => $roles, 'permissions' => $permissions]);
+      return View::make('badmin::permission_role.index', ['roles' => $roles, 'permissions' => $permissions]);
     }
 
     /**

@@ -24,7 +24,7 @@ class UserController extends Controller
     public function index()
     {
       $users = User::all();
-      return View::make('user.index', ['users' => $users]);  
+      return View::make('badmin::user.index', ['users' => $users]);  
     }
 
     /**
@@ -35,7 +35,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::all();
-        return View::make('user.create', ['roles' => $roles]);
+        return View::make('badmin::user.create', ['roles' => $roles]);
     }
 
     /**
@@ -73,7 +73,7 @@ class UserController extends Controller
       $user = User::find($id);
       $roles = Role::all();
       $userRoles = $user->getRoles();
-      return View::make('user.edit', [ 'user' => $user, 'roles' => $roles, 'userRoles' => $userRoles ]);
+      return View::make('badmin::user.edit', [ 'user' => $user, 'roles' => $roles, 'userRoles' => $userRoles ]);
     }
 
     /**
@@ -121,7 +121,7 @@ class UserController extends Controller
       $user = User::find($id);
       $permissions = Permission::all();
       $userPerms = $user->permissions->lists('slug', 'name');
-      return View::make('user.permissions', [ 'user' => $user, 'permissions' => $permissions, 'userPerms' => $userPerms ]);
+      return View::make('badmin::user.permissions', [ 'user' => $user, 'permissions' => $permissions, 'userPerms' => $userPerms ]);
     }
 
     /**
