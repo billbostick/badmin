@@ -1,29 +1,76 @@
-This is the badmin readme file. 
+Badmin provides a simple admin interface for the authentication features that are built into Laravel 5.1, as well as the Laravel ACL package (https://github.com/kodeine/laravel-acl). The screens are based on Bootstrap and jQuery.
 
-edit config\app.php:
+Requirements and Dependencies:
 
+This package requires PHP 5.5.9 or greater. It has dependencies on the  Illuminate/HTML and Kodeine/Laravel-ACL packages.
+
+Installation:
+
+These instructions describe the installation of Badmin, Laravel-ACL, and the Illuminate/HTML package. If you already have either of the dependant packages installed, you may have already performed some of these steps.
+
+1. Use composer to require the package:
+
+  >> composer require bostick/badmin:dev-master@dev
+
+2. Add the service provides for HTML, Laravel-Acl, and Badmin to config/app.php:
+
+  'providers' => [
+    ...
     Illuminate\Html\HtmlServiceProvider::class,
     Kodeine\Acl\AclServiceProvider::class,
     Bostick\Badmin\BadminServiceProvider::class,
+    ...
 
+3. Add the aliases for HTML to config/app.php:
+
+  'aliases' => [
+    ...
     'Form'      => Illuminate\Html\FormFacade::class,
     'Html'      => Illuminate\Html\HtmlFacade::class,
+    ...
 
-php artisan vendor:publish
-php artisan migrate
+4. Add the HasRole trait to your User model (app/User.php). Note this issue at https://github.com/kodeine/laravel-acl/issues/90. The following code works with the current release of Laravel-ACL.
 
-edit app\User.php and add the HasRole trait to your User model:
-(see https://github.com/kodeine/laravel-acl/issues/90)
+  use Kodeine\Acl\Traits\HasRole;
 
-    use Kodeine\Acl\Traits\HasRole;
+  ...
+  
+  class User extends Model implements AuthenticatableContract,
+                                      AuthorizableContract,
+                                      CanResetPasswordContract
 
+  {
     use Authenticatable, Authorizable, CanResetPassword, HasRole {
-        HasRole::can insteadof Authorizable;
-            }
+      HasRole::can insteadof Authorizable;
+  }
 
+                                                                                                  
 
-Add the following to your app/Http/Kernel.php
+5. Use artisan to publish package features:
+
+  >> php artisan vendor:publish
+
+6. Use artisan to run the migration scripts:
+
+  >> php artisan migrate
+
+7. Add the following to your app/Http/Kernel.php
 
     protected $routeMiddleware = [
         'acl' => \Kodeine\Acl\Middleware\HasPermission::class,
         ];
+
+Use:
+
+Once it is installed, Badmin will provide primary views at the following routes:
+
+  login
+  logout
+  register
+  password/email
+  admin/user
+  admin/permission
+  admin/role
+  admin/access
+
+
