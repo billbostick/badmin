@@ -93,7 +93,7 @@ Add the following to your app/Http/Kernel.php
         ];
 ```
 
-### <a name="use"></a>Use
+# <a name="use"></a>Use
 
 Once it is installed, Badmin will provide primary views at the following routes:
 
